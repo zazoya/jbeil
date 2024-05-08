@@ -1,0 +1,91 @@
+---
+import Icons from "../components/Icons.astro";
+
+import '../styles/main.css';
+// Component Imports
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+// import {Image} from '@astrojs/components/Image'
+const DomainURL = Astro.url.origin
+const currentAbsoluteLink=`${DomainURL}`
+---
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+    <meta name='generator' content={Astro.generator} />
+    <meta name='description' content="Description" />
+    <meta name='distribution' content='global'/>
+    <meta name='audience' content='all' />
+    <meta name='coverage' content='Worldwide' />
+    <!-- <meta name='topic' content={keywords.join(', ')} /> -->
+    <meta name='summary' content="Description" />
+    <meta name='author' content='Mahmoud Galal' />
+    <!-- <meta name='keywords' content={keywords.join(', ')} /> -->
+    <title>Jbeil</title>
+    <meta
+      name='viewport'
+      content='width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0'
+    />
+    <!-- Google tags -->
+    <meta itemprop="name" content=Jbeil>
+    <meta itemprop="description" content="Description">
+    <meta itemprop="image" content={`${DomainURL}/images/og_banner.png`}>
+    <meta http-equiv='Content-Language' content='en' />
+    <!-- Facebook tags -->
+    <meta property="og:url" content={`${currentAbsoluteLink}`}>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content=Jbeil>
+    <meta property="og:description" content="Description">
+    <meta property="og:image" content={`${DomainURL}/images/og_banner.png`}>
+    <!-- Twitter tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content=Jbeil>
+    <meta name="twitter:description" content="Description">
+    <meta name="twitter:image" content={`${DomainURL}/images/og_banner.png`}>
+    <meta name='twitter:creator' content='@eitmg'/>
+    <meta name='twitter:site' content="@eitmg"/>
+    <meta name='twitter:domain' content={`${currentAbsoluteLink}`}/>
+    <meta property='og:image:width' content='1200' />
+    <meta property='og:image:height' content='600' />
+    <meta property='og:image' itemprop="image" content={`${DomainURL}/images/og_banner.png`} />
+    <meta property='og:image:alt' content='Jbeil' />
+    <meta property='og:site_name' content='Jbeil' />
+    <meta property='og:title' content=Jbeil />
+    <meta property='og:description' content="Description" />
+    <meta property='og:type' content='website' />
+    <meta property='og:url' content={currentAbsoluteLink} />
+    <link rel='canonical' href={currentAbsoluteLink} />
+    <meta name='mobile-web-app-capable' content='yes' />
+    <meta itemprop="url" content={DomainURL}/>
+    <meta itemprop="name" content="Jbeil"/>
+
+
+    <meta name='apple-mobile-web-app-capable' content='yes' />
+    <meta name='apple-mobile-web-app-status-bar-style' content='black-translucent' />
+    <meta name='apple-mobile-web-app-title' content='Jbeil' />
+    <meta name='application-name' content='Jbeil' />
+
+    <link rel='apple-touch-icon' sizes='180x180' href='/manifest/apple-touch-icon.png' />
+    <meta name='msapplication-TileColor' content='#101010' />
+    <meta name='theme-color' content='#848a9a' />
+
+    <link rel='manifest' href='/manifest/site.webmanifest' />
+    <link rel='icon' type='image/png' sizes='32x32' href='/manifest/favicon-32x32.png' />
+    <link rel='icon' type='image/svg+xml' sizes='16x16' href='/manifest/favicon-16x16.png' />
+    <link rel='shortcut icon' href='/manifest/favicon.ico' type='image/svg+xml' />
+	</head>
+
+	<body>
+		<div class="h-screen relative overflow-hidden">
+			<div class="absolute inset-0">
+				<img src="/assets/bg.png" alt="Background" class="h-full w-full object-cover" />
+			</div>
+			<div class="absolute inset-0 w-full h-full flex items-center justify-center">
+				<Icons />
+			</div>
+			<img src="/assets/logo.png" alt="jibel" class="absolute top-5 left-1/2 -translate-x-1/2 w-[720px] logo">
+			</div>
+	</body>
+</html>

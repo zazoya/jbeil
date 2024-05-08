@@ -1,0 +1,33 @@
+---
+import Icon from "./Icon.astro";
+const socialMedaia = [
+  {
+    alt: 'Menu',
+    src: '/assets/jbiel.png',
+    href: 'https://we.tl/t-1LZw47pi5F?utm_campaign=TRN_TDL_05&utm_source=sendgrid&utm_medium=email&trk=TRN_TDL_05'
+  },
+  {
+    alt: 'Instagram',
+    src: '/assets/instagram.png',
+    href: 'https://instagram.com/jbeillebaneserestaurant?igshid=MzRlODBiNWFlZA=='
+  },
+  {
+    alt: 'Facebook',
+    src: '/assets/facebook.png',
+    href: 'https://www.facebook.com/JbeilLebaneseRestaurant?mibextid=LQQJ4d'
+  },
+  {
+    alt: 'Tiktok',
+    src: '/assets/tiktok.png',
+    href: 'https://www.tiktok.com/@jbeieg?_t=8abjar5teze&_r=1'
+  }
+]
+---
+
+<div class="relative grid grid-cols-2 sm:grid-cols-4 gap-8 justify-items-center items-center sm:w-5/6 sm:mx-auto mx-4 display-icons">
+  {
+    socialMedaia?.map(el=>{
+      return <Icon {...el} />
+    })
+  }
+</div>

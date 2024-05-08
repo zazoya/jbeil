@@ -1,0 +1,12 @@
+---
+
+const { src, alt, href } = Astro.props
+---
+<a 
+href={href} 
+target="_blank"
+referrerpolicy="no-referrer"
+rel="noopener noreferrer"
+class="flex items-center justify-center w-36 h-36 rounded-full group">
+<img src={src} alt={alt} class="w-full h-full group-hover:grayscale duration-300 ease-out">
+</a>
